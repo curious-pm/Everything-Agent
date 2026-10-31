@@ -42,7 +42,7 @@ jobs:
           workspaces: desktop/src-tauri
       - run: uv sync --locked --extra package
       - run: ${{ matrix.script }}
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: installer-${{ matrix.os }}
           path: ${{ matrix.files }}
